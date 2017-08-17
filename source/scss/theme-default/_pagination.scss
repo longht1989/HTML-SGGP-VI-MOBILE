@@ -1,0 +1,31 @@
+/* ====================================
+   Customize Pagination
+   ==================================== */
+
+.pagination {
+    margin-top: 0;
+    @include clearfix;
+    display: block;
+    li {
+        display: inline-block;
+        > a {
+            margin-right: 10px;
+            padding: 6px 12px;
+            background-color: #eee;
+            border: none;
+            @include transition(all, 0.2, ease-out);
+
+        }
+        &:hover {
+            > a {
+                background-color: #ddd;
+            }
+        }
+        &.active {
+            > a {
+                background-color: $brand-primary;
+                color: #fff;
+            }
+        }
+    }
+}

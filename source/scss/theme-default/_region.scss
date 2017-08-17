@@ -1,0 +1,412 @@
+/* ====================================
+   All region in project
+   ==================================== */
+
+
+/* zone global style */
+
+.zone {
+    margin-bottom: 20px;
+    > header {
+        margin-bottom: 10px;
+        .zone-title {
+            font-family: $font-family-special;
+            @include font-size(18, 24);
+            text-transform: uppercase;
+            border-top: 1px solid #ddd;
+            a {
+                display: inline-block;
+                padding-top: 5px;
+                color: $brand-primary;
+                @include transition(all, 0.2, ease-out);
+                border-top: 3px solid $brand-primary;
+                @include haf() {
+                    color: $gray;
+                    &::before {
+                        background-color: $gray;
+                    }
+                }
+            }
+        }
+    }
+    .zone-content {
+        .row + .story {
+            margin-top: 10px;
+        }
+    }
+    // zone with green title
+    &.green-title {
+        >header {
+            margin-bottom: 0;
+            .zone-title {
+                background-color: $brand-info;
+                border-top-color: #d9dadb;
+                a {
+                    color: white;
+                    border-top-color: white;
+                    padding-left: 8px;
+                    @include haf() {
+                        color: $gray;
+                        &::before {
+                            background-color: $gray;
+                        }
+                    }
+                }
+            }
+        }
+        .zone-content {
+            padding: 10px;
+            background-color: #d9dadb;
+        }
+        .view-more {
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+    }
+    &.zone--sport {
+        @extend .green-title;
+        >header {
+            .zone-title {
+                border-top: none;
+                a {
+                    display: inline;
+                    padding-left: 0;
+                    img {
+                        display: block;
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+    &--special {
+        >header {
+            margin-bottom: 0;
+            .zone-title {
+                border-top: none;
+                a {
+                    padding-top: 0;
+                    border-top: none;
+                    display: block;
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+        .zone-content {
+            padding: 10px;
+            background: #dedede;
+        }
+    }
+    &.blue-title {
+        >header {
+            .zone-title {
+                a {
+                    color: $brand-success;
+                    &::before {
+                        background-color: $brand-success;
+                    }
+                    @include haf() {
+                        color: $gray;
+                        &::before {
+                            background-color: $gray;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.red-title {
+        >header {
+            margin-bottom: 0;
+            .zone-title {
+                background-color: $brand-primary;
+                border-top: none;
+                a {
+                    color: white;
+                    border-top: none;
+                    padding: 3px 0 3px 10px;
+                    @include haf() {
+                        color: $gray;
+                        &::before {
+                            background-color: $gray;
+                        }
+                    }
+                }
+            }
+        }
+        .zone-content {
+            padding: 10px;
+            background-color: #231f20;
+        }
+        .view-more {
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+    }
+    /* slider-zone */
+    &.zone-slider,
+    &.album-zone {
+        .zone-content {
+            position: relative;
+        }
+        .bx-viewport {
+            // margin-bottom: 10px;
+        }
+        .bx-pager {
+            text-align: center;
+            .bx-pager-item {
+                display: inline-block;
+                margin-right: 5px;
+                height: 35px;
+                a {
+                    display: block;
+                    text-indent: -9999em;
+                    width: 8px;
+                    height: 8px;
+                    margin-top: 13px;
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+                    -ms-border-radius: 50%;
+                    -o-border-radius: 50%;
+                    border-radius: 50%;
+                    background-color: #d8d8d8;
+                    &.active {
+                        background-color: $brand-primary;
+                    }
+                }
+            }
+        }
+        .slider-control {
+            .fa {
+                @extend .btn;
+                @extend .btn-border;
+                min-width: 33px;
+                a {
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                }
+                &.fa-angle-left {
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                }
+                &.fa-angle-right {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                }
+            }
+            [class*="icon-"] {
+                position: absolute;
+                bottom: 0;
+                a {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                }
+            }
+            .icon-prev {
+                left: 0;
+            }
+            .icon-next {
+                right: 0;
+            }
+        }
+    }
+    // slider with caption
+    .slider-caption {
+        li {
+            position: relative;
+            .caption {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                padding: 10px;
+                background-color: rgba(0, 0, 0, .5);
+                color: white;
+            }
+        }
+    }
+    // ads in zone
+    .zone-ads {
+        margin-top: 10px;
+    }
+    .highlight--col & {
+        padding-bottom: 15px;
+        border-bottom: 1px solid #ddd;
+    }
+    &-photo,
+    &-video,
+    &-meeting {
+        >header {
+            background-color: #6d6e72;
+            .zone-title {
+                border-top: none;
+                line-height: 35px;
+                a {
+                    border-top: none;
+                    background-color: white;
+                    padding: 0 10px;
+                }
+                [class*="icon-"] {
+                    vertical-align: middle;
+                    margin: 0 10px;
+                }
+            }
+        }
+    }
+    &-video,
+    &-meeting {
+        >header {
+            .zone-title {
+                a {
+                    background: white;
+                }
+            }
+        }
+    }
+    &-blue {
+        .zone-content {
+            padding: 10px 20px;
+            background-color: #25aae1;
+            .slider-control [class*=icon-] {
+                top: 23%;
+            }
+        }
+    }
+    &.category-mostview {
+        >header {
+            .zone-title {
+                border-top: none;
+                color: #777;
+            }
+        }
+    }
+    .zone-listing & {
+        border: 1px solid #666;
+        >header {
+            .zone-title {
+                border: none;
+                background-color: #f3f3f4;
+                padding: 3px 10px 5px;
+                a {
+                    border: none;
+                }
+            }
+        }
+        .zone-content {
+            padding: 10px 20px;
+        }
+        &.zone--red {
+            >header {
+                .zone-title {
+                    background: $brand-primary;
+                    a {
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+    &.category-listing {
+        padding-top: 15px;
+        border-top: 1px solid #ddd;
+        .story {
+            &:last-child {
+                margin-bottom: 15px;
+            }
+        }
+    }
+    &--breaking {
+        background: #eee;
+        padding: 10px;
+        margin-left: -10px;
+        margin-right: -10px;
+        .zone-title {
+            @include font-size(18, 22);
+            font-family: $font-family-special, Helvetica, Arial, sans-serif;
+            color: #2babe2;
+            margin-bottom: 3px;
+            a {
+                color: #2babe2;
+            }
+        }
+    }
+}
+
+
+/* event zone */
+
+.event-zone {
+    @include clearfix;
+    background: url(../img/skvd-bg.png) left top repeat-y;
+    background-size: 100%;
+    .zone-title {
+        float: left;
+        width: 124px;
+        img {
+            width: 124px;
+            height: auto;
+        }
+    }
+    .zone-content {
+        padding: 5px 10px;
+        float: left;
+        width: calc(100% - 124px);
+    }
+}
+
+
+/* .story-listing  */
+
+.story-listing {
+    .story {
+        margin-bottom: 20px;
+    }
+}
+
+
+/* top zone */
+
+.top-zone {
+    padding-top: 20px;
+    border-top: 2px solid #ddd;
+}
+
+// ultilities listing
+.ulti {
+    &__item {
+        margin-bottom: 10px;
+        @include last-child-y();
+        .fa {
+            margin-right: 5px;
+        }
+        .fa-usd {
+            color: $brand-success;
+        }
+        .fa-adn {
+            color: $brand-warning;
+        }
+    }
+}
+
+.qc {
+    margin-bottom: 20px;
+    text-align: center;
+    .adsitem {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+}

@@ -1,0 +1,152 @@
+/* ====================================   Header's style   ==================================== */
+
+#site-header {
+    margin-bottom: 15px;
+    @include clearfix();
+    z-index: 3;
+    // z-index: 2;
+    background: #f3f3f5;
+    position: relative;
+    padding: 10px;
+    .logo {
+        margin-left: 44px;
+        width: 136px;
+    }
+    .btn-menu {
+        position: absolute;
+        left: 10px;
+        top: 16px;
+        &.is-active {
+            background: #6d6e72;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            padding: 16px 10px;
+        }
+    }
+    .btn-search {
+        position: absolute;
+        top: 16px;
+        right: 10px;
+        &.is-active {
+            background: #6d6e72;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            padding: 16px 10px;
+        }
+        .icon-m-search {}
+    }
+    .icon-mobile {
+        position: absolute;
+        top: 16px;
+        right: 47px;
+    }
+}
+
+.site-header {
+    &__menu,
+    &__search {
+        display: none;
+        background: #6d6e72;
+        position: absolute;
+        top: 100%;
+        margin-top: 1px;
+        left: 0px;
+        right: 0px;
+        padding: 10px 10px 0;
+        ul {
+            @include clearfix;
+            font-size: 0;
+        }
+        li {
+            display: inline-block;
+            vertical-align: top;
+            width: 50%;
+            font-size: 12px;
+            padding: 0 7px;
+            font-family: $font-family-special;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            a {
+                padding-top: 5px;
+                color: white;
+                position: relative;
+                display: block;
+                &::before {
+                    content: '';
+                    display: block;
+                    width: 100px;
+                    height: 1px;
+                    background: white;
+                    position: absolute;
+                    opacity: 0.4;
+                    top: 0;
+                    left: 0;
+                }
+            }
+            &.is-firstrow {
+                a {
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+        }
+        .menu-close {
+            margin: 0 -10px;
+            text-align: center;
+            font-size: 10px;
+            background: #818286;
+            height: 28px;
+            line-height: 28px;
+            border-top: 1px solid #fff;
+            a {
+                color: white;
+            }
+            .icon-close {
+                margin-right: 5px;
+            }
+        }
+    }
+    &__search {
+        padding-top: 5px;
+        z-index: 3;
+        .form-group {
+            @include clearfix;
+            text-align: center;
+            font-size: 0;
+            margin-bottom: 5px;
+        }
+        input {
+            display: inline-block;
+            width: 215px;
+            height: 35px;
+            line-height: 35px;
+        }
+        button {
+            vertical-align: top;
+            display: inline-block;
+            width: 85px;
+            height: 35px;
+        }
+        .search-mask {
+            position: fixed;
+            top: 95px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+        }
+    }
+}
+
+.linked-sites {
+    @include clearfix;
+    margin: -5px 10px 10px;
+    li {
+        font-size: 10px;
+        float: left;
+        margin-right: 5px;
+    }
+}

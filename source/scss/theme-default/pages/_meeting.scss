@@ -1,0 +1,68 @@
+/* Meeting style page */
+
+.guess-zone {
+    .zone-title {
+        color: $brand-success;
+    }
+}
+
+.guess {
+    margin-bottom: 0 !important;
+    &__avatar {
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 5px solid #ddd;
+    }
+    &__name {
+        font-family: $font-family-special;
+        font-size: 20px;
+        text-align: center;
+        padding-bottom: 8px;
+        border-bottom: 1px solid #ddd;
+    }
+    &__title {
+        text-align: center;
+        font-style: italic;
+    }
+}
+
+.meeting {
+    &__question {
+        position: relative;
+        padding: 10px 10px 10px 45px;
+        background: lighten($brand-primary, 60%);
+        background: #f7e5e7;
+        &::before {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            color: white;
+            @include font-size(16, 30);
+            font-family: "fontawesome";
+            content: '';
+            background-color: $brand-primary;
+        }
+    }
+    &__answer {
+        @extend .meeting__question;
+        background: lighten($brand-success, 63%);
+        background: #e6eef2;
+        &::before {
+            content: '';
+            background-color: $brand-success;
+        }
+    }
+    &__putter,
+    &__respondent {
+        font-weight: bold;
+        @include font-size(16, 21);
+    }
+}

@@ -1,0 +1,347 @@
+/* style for story */
+
+.story {
+    @include clearfix;
+    .thumb {}
+    .title {
+        @include font-size(14, 19);
+        font-weight: bold;
+        .fa {
+            margin-left: 3px;
+            font-size: .8em;
+        }
+        a {
+            .area--featured & {
+                &:hover {
+                    color: white;
+                }
+            }
+        }
+    }
+    .cate {
+        a {
+            color: $brand-primary;
+        }
+    }
+    .meta {
+        color: #a0a0a0;
+        @include font-size(10, 14);
+    }
+    .author {
+        margin-right: 5px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    .summary {
+        color: #58585b;
+        @include font-size(12, 17);
+    }
+    .title,
+    .thumb,
+    .cate,
+    .meta {
+        margin-bottom: 5px;
+    }
+    .thumb {
+        .story-listing & {
+            margin-top: 2px;
+            @include respond-to-xs {
+                margin-top: 3px;
+            }
+        }
+    }
+    // story with bold title
+    &.story-bold {
+        margin-bottom: 10px;
+        .title {
+            @include font-size(17, 23);
+        }
+    }
+    // story cover
+    &.story-cover {
+        margin-bottom: 10px;
+        .title {
+            @include font-size(22, 26);
+        }
+    }
+    // story with red bullet 
+    &.story-bullet {
+        margin-bottom: 8px;
+        @include last-child-y;
+        .title {
+            &::before {
+                content: '';
+                display: inline;
+                margin-right: 5px;
+                font-family: "fontawesome";
+            }
+        }
+    }
+    &.story-normal {
+        margin-bottom: 15px;
+        .title {
+            @include font-size(17, 23);
+            font-weight: normal;
+        }
+    }
+    &.story-video {
+        .thumb {
+            position: relative;
+            a {
+                &::after {
+                    @extend .icon-video;
+                    background-image: url(../img/sprites.png?v1.02);
+                    background-position: -200px -200px;
+                    width: 27px;
+                    height: 27px;
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    margin-top: -10px;
+                    margin-right: -10px;
+                }
+            }
+        }
+    }
+    // story with mask 
+    &.story-mask {
+        .thumb {
+            z-index: 1;
+        }
+        > header {
+            position: relative;
+            padding: 10px;
+            background: #fff;
+            margin-top: -25px;
+            margin-left: 10px;
+            margin-right: 10px;
+            z-index: 2;
+        }
+        &.story-cover {
+            > header {
+                padding: 20px;
+                margin-top: -50px;
+                margin-right: 20px;
+                margin-left: 20px;
+            }
+        }
+    }
+    // story border
+    &.story-border {
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+    }
+    &.story-horizontal {
+        margin-bottom: 20px;
+        .thumb {
+            float: left;
+            width: 124px;
+            height: 70px;
+            margin-right: 10px;
+        }
+        >header {
+            overflow: hidden;
+            .title {
+                max-height: 90px;
+                overflow: hidden;
+            }
+            .meta {
+                margin-bottom: 0;
+            }
+        }
+    }
+    // story with background color
+    &.story-red,
+    &.story-dark,
+    &.story-darker {
+        .title {
+            a {
+                color: white;
+                &:hover {
+                    color: #ddd;
+                }
+            }
+        }
+        .summary,
+        .meta {
+            color: white;
+            margin-bottom: 0;
+        }
+    }
+    &.story-red,
+    &.story-dark,
+    &.story-darker,
+    &.story-light {
+        .thumb {
+            margin-bottom: 0;
+        }
+        >header {
+            padding: 15px;
+        }
+    }
+    &.story-red {
+        background: #df3332;
+    }
+    &.story-dark {
+        background: #818285;
+    }
+    &.story-darker {
+        background: #58585A;
+    }
+    &.story-light {
+        background: #e7e7e8;
+    }
+    .highlight--col .zone & {
+        margin-bottom: 10px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        .title {
+            font-weight: normal;
+            max-height: 38px;
+            overflow: hidden;
+        }
+    }
+    .zone-slider & {
+        .title {
+            margin-bottom: 0;
+        }
+    }
+    .story-listing & {
+        margin-bottom: 20px;
+        @include last-child-y();
+    }
+    .event-zone & {
+        >header {
+            .title {
+                @include font-size(17, 23);
+                margin-bottom: 5px;
+            }
+            .author {
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+            .meta {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .zone--special & {
+        margin-bottom: 0;
+        .meta {
+            margin-bottom: 0;
+        }
+    }
+    .zone--breaking & {
+        margin-bottom: 0;
+    }
+    .top-zone .zone.story-listing & {
+        .title,
+        .meta,
+        .summary {
+            margin-bottom: 2px;
+        }
+        .title {
+            max-height: 38px;
+            overflow: hidden;
+        }
+        .summary {
+            max-height: 51px;
+            overflow: hidden;
+        }
+    }
+    .top-zone & {
+        .title {
+            max-height: 57px;
+            overflow: hidden;
+        }
+        &.story-bold {
+            .title {
+                max-height: 50px;
+            }
+            .summary {
+                max-height: 34px;
+                overflow: hidden;
+            }
+        }
+    }
+    .area--featured &,
+    .red-title & {
+        .title {
+            a {
+                color: white;
+            }
+        }
+        .meta {
+            color: #babbbb;
+        }
+        .summary {
+            color: white;
+        }
+    }
+    .red-title & {
+        .thumb {
+            border: 1px solid #b7b6b7;
+        }
+        &.story-bold {
+            .thumb {
+                border: none;
+            }
+        }
+    }
+    .zone-blue & {
+        .title {
+            margin-bottom: 5px;
+            a {
+                color: white;
+            }
+        }
+        .summary {
+            color: white;
+        }
+    }
+    .cate-story-listing & {
+        margin-bottom: 15px;
+        padding-bottom: 5px;
+        @include last-child-y();
+        position: relative;
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 10px;
+            right: 10px;
+            height: 1px;
+            background-color: #eee;
+        }
+        &:last-child {
+            &::before {
+                background-color: transparent;
+            }
+        }
+        .thumb {
+            margin-top: 3px;
+            @include respond-to-xs {
+                margin-top: 5px;
+            }
+        }
+        .title {
+            font-weight: bold;
+        }
+    }
+}
+
+.page-listing {
+    margin-bottom: 20px;
+    &__item {
+        @include font-size(14, 19);
+        font-weight: bold;
+        margin-bottom: 15px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

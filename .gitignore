@@ -1,0 +1,9 @@
+.DS_Store
+.sass-cache
+*.scssc
+node_modules/
+
+# FTP config
+source/sftp-config.json
+build/sftp-config.json
+# test gitignore
