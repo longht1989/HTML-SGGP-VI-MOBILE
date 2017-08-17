@@ -2,12 +2,10 @@
    All region in project
    ==================================== */
 
-
-/* zone global style */
-
+// zone global style
 .zone {
     margin-bottom: 20px;
-    > header {
+    >header {
         margin-bottom: 10px;
         .zone-title {
             font-family: $font-family-special;
@@ -30,11 +28,11 @@
         }
     }
     .zone-content {
-        .row + .story {
+        .row+.story {
             margin-top: 10px;
         }
     }
-    // zone with green title
+    /* zone with green title */
     &.green-title {
         >header {
             margin-bottom: 0;
@@ -223,7 +221,7 @@
             }
         }
     }
-    // slider with caption
+    /* slider with caption */
     .slider-caption {
         li {
             position: relative;
@@ -238,7 +236,7 @@
             }
         }
     }
-    // ads in zone
+    /* ads in zone */
     .zone-ads {
         margin-top: 10px;
     }
@@ -346,8 +344,7 @@
 }
 
 
-/* event zone */
-
+// event zone
 .event-zone {
     @include clearfix;
     background: url(../img/skvd-bg.png) left top repeat-y;
@@ -368,8 +365,7 @@
 }
 
 
-/* .story-listing  */
-
+// .story-listing 
 .story-listing {
     .story {
         margin-bottom: 20px;
@@ -377,8 +373,7 @@
 }
 
 
-/* top zone */
-
+// top zone
 .top-zone {
     padding-top: 20px;
     border-top: 2px solid #ddd;
@@ -397,6 +392,55 @@
         }
         .fa-adn {
             color: $brand-warning;
+        }
+    }
+}
+
+// box style
+.box {
+    &--voting {
+        background: none;
+        padding: 0;
+        margin-bottom: 10px;
+        .box__title {
+            font-size: 18px;
+            line-height: 22px;
+            color: #13b2df;
+            font-family: $font-family-special;
+            text-transform: uppercase;
+            margin-bottom: 3px;
+            position: relative;
+            a {
+                color: #2babe2;
+            }
+            &:hover {
+                color: #2796c5;
+                a {
+                    color: #2796c5;
+                }
+            }
+        }
+        .question {
+            font-size: 12px;
+            line-height: 17px;
+            margin-bottom: 5px;
+        }
+        .answer {
+            font-size: 12px;
+            line-height: 1.4em;
+            input {
+                margin-right: 3px;
+            }
+        }
+    }
+    .action-submit {
+        margin-top: 10px;
+    }
+    .btn {
+        font-size: 10px;
+        padding: 2px 4px;
+        &+.btn {
+            margin-left: 5px;
         }
     }
 }

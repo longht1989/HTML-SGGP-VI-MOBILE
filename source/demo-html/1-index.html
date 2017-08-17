@@ -254,6 +254,42 @@
                     </article>
                 </div>
             </section>
+            <!-- voting box -->
+            <section class="box box--voting">
+                <h3 class="box__title">Bình chọn</h3>
+                <div class="box__content">
+                    <p class="question">Về trạm BOT Cai Lậy, theo bạn nên giảm phí hay dời trạm?</p>
+                    <div class="answer">
+                        <input type="radio" name="demo" value="Giảm phí"> Giảm phí
+                    </div>
+                    <div class="answer">
+                        <input type="radio" name="demo" value="Dời trạm"> Dời trạm
+                    </div>
+                    <div class="answer">
+                        <input type="radio" name="demo" value="Ý kiến khác"> Ý kiến khác
+                    </div>
+                    <div class="action-submit">
+                        <button class="btn btn-default">Bình chọn</button>
+                        <button class="btn btn-default" data-toggle="modal" data-target="#myModal">Xem kết quả</button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title" id="myModalLabel">Kết quả bình chọn</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p><strong>Giảm phí:</strong> 50%</p>
+                                        <p><strong>Dời trạm:</strong> 30%</p>
+                                        <p><strong>Khác:</strong> 20%</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <!-- normal zone -->
             <section class="zone">
                 <header>
