@@ -562,9 +562,12 @@
 }
 
 .other-story {
+    padding-top: 10px;
+    border-top: 1px solid #eee;
     h4 {
         margin-bottom: 10px;
         font-weight: bold;
+        color: $brand-primary;
     }
     ul {
         margin-bottom: 15px;
@@ -575,9 +578,7 @@
             margin-bottom: 0;
         }
     }
-    .story {
-        &:last-child {
-            margin-bottom: 15px;
-        }
+    .story >header .title {
+        font-weight: normal;
     }
 }
