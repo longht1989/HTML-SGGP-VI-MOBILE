@@ -283,6 +283,37 @@
             }
         }
     }
+    &-yellow {
+        >header {
+            .zone-title {
+                a {
+                    color: $brand-extend;
+                    border-top-color: $brand-extend;
+                    &::before {
+                        background: $brand-extend;
+                    }
+                }
+            }
+        }
+        .zone-content {
+            background: #f3f4f4;
+            border: 1px solid $brand-extend;
+            padding: 10px;
+            .story {
+                margin-bottom: 0;
+            }
+            .slider-control [class*=icon-] {
+                top: 43%;
+            }
+        }
+        .zone-footer {
+            background: $brand-extend;
+            padding: 5px 10px;
+            font-size: 12px;
+            color: white;
+            text-align: center;
+        }
+    }
     &.category-mostview {
         >header {
             .zone-title {

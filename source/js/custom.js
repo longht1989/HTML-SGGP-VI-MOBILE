@@ -84,6 +84,18 @@ $(function() {
         nextSelector: '#demo-slider-next',
         prevSelector: '#demo-slider-prev'
     });
+    /*demo slider */
+    $('#subcate-slider-01').bxSlider({
+        pager: false,
+        maxSlides: 2,
+        minSlides: 2,
+        slideMargin: 20,
+        slideWidth: 262,
+        nextText: '',
+        prevText: '',
+        nextSelector: '#demo-slider-next-01',
+        prevSelector: '#demo-slider-prev-01'
+    });
 });
 
 /*scrool to top */

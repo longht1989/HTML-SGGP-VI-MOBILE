@@ -104,12 +104,20 @@
     width: 41px;
     height: 30px;
     background-position: -300px -100px;
+    &.icon-yellow{
+        background-position: -300px -130px;
+        width: 30px;
+    }
 }
 
 .icon-next {
     width: 41px;
     height: 30px;
     background-position: -400px -100px;
+    &.icon-yellow{
+        background-position: -400px -130px;
+        width: 30px;
+    }
 }
 
 .icon-arrow-down {
