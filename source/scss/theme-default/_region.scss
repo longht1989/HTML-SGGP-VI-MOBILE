@@ -479,7 +479,8 @@
 .qc {
     margin-bottom: 20px;
     text-align: center;
-    .adsitem {
+    .adsitem,
+    [id^="Mobile_Ads"] {
         margin-left: auto;
         margin-right: auto;
         display: block;
