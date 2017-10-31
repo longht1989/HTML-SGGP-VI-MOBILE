@@ -49,22 +49,19 @@
                 margin-top: 3px;
             }
         }
-    }
-    // story with bold title
+    } // story with bold title
     &.story-bold {
         margin-bottom: 10px;
         .title {
             @include font-size(17, 23);
         }
-    }
-    // story cover
+    } // story cover
     &.story-cover {
         margin-bottom: 10px;
         .title {
             @include font-size(22, 26);
         }
-    }
-    // story with red bullet 
+    } // story with red bullet 
     &.story-bullet {
         margin-bottom: 8px;
         @include last-child-y;
@@ -103,13 +100,12 @@
                 }
             }
         }
-    }
-    // story with mask 
+    } // story with mask 
     &.story-mask {
         .thumb {
             z-index: 1;
         }
-        > header {
+        >header {
             position: relative;
             padding: 10px;
             background: #fff;
@@ -119,15 +115,14 @@
             z-index: 2;
         }
         &.story-cover {
-            > header {
+            >header {
                 padding: 20px;
                 margin-top: -50px;
                 margin-right: 20px;
                 margin-left: 20px;
             }
         }
-    }
-    // story border
+    } // story border
     &.story-border {
         border-bottom: 1px solid #ddd;
         padding-bottom: 5px;
@@ -151,8 +146,7 @@
                 margin-bottom: 0;
             }
         }
-    }
-    // story with background color
+    } // story with background color
     &.story-red,
     &.story-dark,
     &.story-darker {
@@ -300,6 +294,16 @@
         }
         .summary {
             color: white;
+        }
+    }
+    .zone-green & {
+        &.story-horizontal {
+            margin-bottom: 0;
+            .thumb {
+                width: 124px;
+                height: 70px;
+                margin: 0 10px 0 0;
+            }
         }
     }
     .cate-story-listing & {

@@ -314,6 +314,31 @@
             text-align: center;
         }
     }
+    &-green {
+        margin-left: -10px;
+        margin-right: -10px;
+        >header {
+            margin-bottom: 0;
+            .zone-title {
+                border-top: none;
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+                a {
+                    display: inline;
+                    padding: 0;
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+        }
+        .zone-content {
+            padding: 10px 10px 10px 10px;
+            background: #c9e49d;
+        }
+    }
     &.category-mostview {
         >header {
             .zone-title {
