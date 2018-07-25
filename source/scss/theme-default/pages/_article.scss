@@ -270,6 +270,9 @@
             margin-left: 20px;
             width: 50%;
         }
+        table.quotes {
+            width: 100%;
+        }
         /* -------------- */
         .article-poll {
             margin-bottom: 20px;
@@ -362,6 +365,16 @@
                 margin-left: 10px;
             }
         }
+        table.notification {
+            width: 100%;
+            td {
+                padding: 10px;
+                p,
+                div {
+                    margin-bottom: 0;
+                }
+            }
+        }
         /* -------------- */
         .article-tag {
             margin-bottom: 16px;
@@ -388,8 +401,7 @@
                     }
                 }
             }
-        }
-        // related inline story
+        } // related inline story
         .related-inline-story {
             margin-bottom: 10px;
             background-color: #f7f7f7;
@@ -435,10 +447,11 @@
 }
 
 
+
 /* comment zone */
 
 .article-comments {
-    > header {
+    >header {
         .fa {
             margin-right: 10px;
         }
