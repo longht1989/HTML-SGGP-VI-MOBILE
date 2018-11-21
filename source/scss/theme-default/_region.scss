@@ -148,8 +148,12 @@
         .zone-title {
             background: url(../img/logo-box-vietnam.jpg) left top no-repeat;
             background-size: cover;
-            text-indent: -9999em;
             height: 30px;
+
+            a {
+                display: block;
+                text-indent: -9999em;
+            }
 
             @include breakpoint(425px) {
                 height: 40px;
